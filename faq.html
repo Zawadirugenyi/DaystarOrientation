@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+    <title>FAQ</title>
+</head>
+<body>
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: rgb(51, 113, 248);
+  overflow: auto;
+}
+
+.navbar a {
+  float: right;
+  align-items: center;
+  padding: 12px;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+color:  #3d7ddd;
+}
+
+.active {
+  background-color: #3d7ddd;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+ float: center;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 32px;
+  }
+}
+    </style>
+
+<div class="navbar">
+    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> </a> 
+    <a href="#"><i class="fa fa-fw fa-search"></i> </a> 
+    <a href="#"><i class="fa fa-fw fa-envelope"></i> </a> 
+    <a href="#"><i class="fa fa-fw fa-user"></i> </a>
+  </div>
+  <style>
+    h1 {  
+      color: rgb(19, 18, 18);  
+      font-weight: normal;  
+      font-size: 2.5rem;  
+      text-align: center;
+      color: #3d7ddd;  
+    }  
+    .readme {  
+        
+      margin: 0 auto;  
+      width: 80%;  
+      color: #06111c;  
+      
+    }  
+    .accordion {  
+      position: relative;  
+      margin: 60px auto;  
+      width: 80%;  
+     
+      
+    }  
+    [id*="open-accordion"] {  
+      background: #e4e4ec;  
+      border-bottom: 1px solid rgb(240, 238, 238); 
+      border-radius: 25px  20px 25px 22px;
+      line-height: 40px;  
+      height: 40px;  
+      display: block;  
+      margin: 0 auto;  
+      position: relative;  
+      width: 99%;  
+    }  
+    [id*="close-accordion"] {  
+      display: none;  
+    }  
+    /*[id*="close-accordion"] {  
+      background: #e4eceb;  
+      border-bottom: 1px solid #fff;  
+      line-height: 40px;  
+      height: 40px;  
+      display: block;  
+      margin: 0 auto;  
+      position: relative;  
+      width: 99%;  
+  }
+      */ 
+    .accordion a {  
+      color: rgb(17, 17, 17);  
+      font-size: 1.25em;  
+      background-color: #3d7ddd21;
+      padding: 18px;
+      font-weight: normal;  
+      border-radius: 25px  20px 25px 22px;
+      right: 3%;
+      margin: 1px;
+      margin-bottom: 15px;
+      padding-left: 4%;  
+      text-decoration: none;  
+      text-shadow: none;  
+      
+    } 
+    .accordion a:hover{
+        color:#3d7ddd;
+    } 
+    [id*="open-accordion"]:after {  
+      content: "";  
+      border-left: 10px solid transparent;  
+      border-right: 10px solid transparent;  
+      border-top: 10px solid rgba(250, 253, 253, 0.6);  
+      position: absolute;  
+      right: 5px;  
+      top: 15px;  
+      z-index: 999;  
+      transform: rotate(-90deg);  
+      -webkit-transform: rotate(-90deg);  
+    } 
+    [id*="open-accordion"] :hover{
+        color:#3d7ddd;
+    } 
+    .target-fix {  
+      display: block;  
+      top: 0;  
+      left: 0;  
+      position: fixed;  
+    }  
+    [id*="close-accordion"]:after {  
+      /* content: "";   */
+      border-left: 10px solid transparent;  
+      border-right: 10px solid transparent;  
+      border-top: 10px solid rgba(6, 161, 245, 0.6);  
+      position: absolute;  
+      right: 5px;  
+      color: #3d7ddd;
+      top: 55px;  
+      z-index: 999;  
+      transform: rotate(-90deg);  
+      border-radius: 25px  20px 25px 22px;
+      -webkit-transform: rotate(-90deg);  
+    }  
+    .accordion-content {  
+      background: rgb(210, 238, 245);  
+      height: 0;  
+      margin: -1px auto 2;  
+      padding: 0 2%;  
+      position: relative;  
+      border-radius: 2px  2px 20px 20px;
+      overflow: hidden;  
+      width: 96%;  
+      transition: all 0.1s ease;  
+      -webkit-transition: all 0.1s ease;  
+      -moz-transition: all 0.1s ease;  
+    }  
+    .accordion span:target ~ .accordion-content {  
+      display: block;  
+      height: auto;  
+      padding-bottom: 35px;  
+      padding-top: 10px;  
+    }  
+    .accordion span:target ~ [id*="close-accordion"] {  
+      display: block;  
+    }  
+    .accordion span:target ~ [id*="open-accordion"] {  
+      display: none;  
+    }  
+    .accordion span:target ~ [id*="close-accordion"]:after {  
+      border-top: 10px solid #333;  
+      transform: rotate(0deg);  
+      -webkit-transform: rotate(0deg);  
+    }  
+    p{
+        text-align: center;
+        font-size: 15px;
+        background: rgb(210, 238, 245);
+        padding: 10px;
+      
+       
+    }
+  a{
+    color:#0d0f12;
+    
+    border-radius: 15px 12px 15px 12px;
+    background-color:#abe9cd;
+    color: rgb(20, 20, 20);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 12px;
+    box-shadow: rgb(7, 39, 59);
+
+  }
+ 
+  
+  </style>
+  
+    
+    </head>  
+    <body>  
+    <h1> FAQ</h1>  
+            <div class="accordion">  
+            <span class="target-fix" id="accordion"> </span>  
+            
+              <div style="padding-bottom:20px;" >  
+                  <span class="target-fix" id="accordion1"> </span>   
+                  <a href="#accordion1" id="open-accordion1" title="open"> How long does orientation last?</a>  
+                  <a href="#accordion" id="close-accordion1" title="close"> How long does orientation last? </a>   
+                  <div class="accordion-content">  
+                    <p> The orientaion lasts for the wholle week. 
+                      Every regestration activity is spread out 
+                      over the week to  allow for amble regestration.
+                       During this period student also get to bond and
+                       familiarized wirh the school. all students are 
+                       required to be full present during this week </p>  
+                </div>  
+                </div>  
+  
+                  <div style="padding-bottom:20px;">  
+                <span class="target-fix" id="accordion2"> </span>  
+                <a href="#accordion2" id="open-accordion2" title="open"> How are you?</a>  
+                <a href="#accordion" id="close-accordion2" title="close">How are you?</a>  
+                <div class="accordion-content">  
+                    <p> The orientaion lasts for the wholle week. 
+                        Every regestration activity is spread out 
+                        over the week to  allow for amble regestration.
+                         During this period student also get to bond and
+                         familiarized wirh the school. all students are 
+                         required to be full present during this week
+                         </p>         
+                </div>  
+            </div>  
+
+            <div style="padding-bottom:20px;">  
+                <span class="target-fix" id="accordion2"> </span>  
+                <a href="#accordion2" id="open-accordion2" title="open"> How are you?</a>  
+                <a href="#accordion" id="close-accordion2" title="close">How are you? </a>  
+                <div class="accordion-content">  
+                    <p> The orientaion lasts for the wholle week. 
+                        Every regestration activity is spread out 
+                        over the week to  allow for amble regestration.
+                         During this period student also get to bond and
+                         familiarized wirh the school. all students are 
+                         required to be full present during this week
+                         </p>         
+                </div>  
+            </div>  
+
+            <div style="padding-bottom:20px;">  
+                <span class="target-fix" id="accordion2"> </span>  
+                <a href="#accordion2" id="open-accordion2" title="open"> How are you?</a>  
+                <a href="#accordion" id="close-accordion2" title="close">How are you? </a>  
+                <div class="accordion-content">  
+                    <p> The orientaion lasts for the wholle week. 
+                        Every regestration activity is spread out 
+                        over the week to  allow for amble regestration.
+                         During this period student also get to bond and
+                         familiarized wirh the school. all students are 
+                         required to be full present during this week
+                         </p>         
+                </div>  
+            </div>  
+             
+                 <div style="padding-bottom:20px;">  
+                <span class="target-fix" id="accordion3"> </span>  
+                <a href="#accordion3" id="open-accordion3" title="open"> How is you today? </a>  
+                <a href="#accordion" id="close-accordion3" title="close"> How is you today?</a>  
+                <div class="accordion-content">  
+                    <p> The orientaion lasts for the wholle week. 
+                      Every regestration activity is spread out 
+                      over the week to  allow for amble regestration.
+                       During this period student also get to bond and
+                       familiarized wirh the school. all students are 
+                       required to be full present during this week </p>  
+                </div>  
+            </div>  
+           </div>  
+
+           <p> Please ask your orientation parent if you can not find an answer to your question  
+            <a href="orientation.html"> For More Questions</a>
+          </p>
+          
+           
+  
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
