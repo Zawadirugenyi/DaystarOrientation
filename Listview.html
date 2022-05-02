@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+ul {
+  counter-reset: index;  
+  padding: 0;
+  max-width: 300px;
+}
+
+/* List element */
+li {
+  counter-increment: index; 
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+
+
+/* Element counter */
+li::before {
+  content: counters(index, ".", decimal-leading-zero);
+  font-size: 2.5rem;
+  text-align: right;
+  margin-right: -55px;
+  font-weight: bold;
+  min-width: 50px;
+  padding-right: 12px;
+  font-variant-numeric: tabular-nums;
+  align-self: flex-start;
+  background-image: transparent;
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Element separation */
+li + li {
+  border-top: 1px solid rgba(10, 21, 95, 0.2);
+  text-decoration: none;
+}
+
+    </style>
+    
+    <ul>
+      
+     <li>
+       Teaching Space(16)
+    </li>
+    <li>
+        Learning Ressource(8)
+    </li> 
+
+    <li> Exhibition Space(3)</li>
+
+    <li>  Food and drink(5) </li>
+       
+    
+    <li>Professinal Services Offices(13)   </li> 
+
+    <li> Halls of Residence(8)</li>
+    
+    <li> Chaplaincy Service(1)</li>
+    <li> Car Park(1)</li>
+    <li> Sport Center(2)</li>
+    </ul>
+  
+</body>
+</html>
